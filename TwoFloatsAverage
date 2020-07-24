@@ -2,6 +2,7 @@
 // Jon King
 // 9-18-19
 //
+package main;
 import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
