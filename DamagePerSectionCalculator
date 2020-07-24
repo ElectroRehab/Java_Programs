@@ -1,0 +1,26 @@
+package main;
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+    System.out.println("DPS Calculator");
+    double damage;
+    double delay;
+    Scanner keyboard = new Scanner(System.in);
+    // Ask user for damage
+    System.out.println("Weapon damage?");
+    damage = keyboard.nextDouble(); 
+    //Ask user for delay
+    System.out.println("Weapon delay in seconds?");
+    delay = keyboard.nextDouble();
+    //Display Display
+    displayDPS(damage, delay);  
+  }
+  public static void displayDPS(double damage, double delay) {
+    //Display DPS of a weapon
+    //DPS = damage / delay (damage/sec)
+    double dps;
+    dps = damage / delay;
+    //Show DPS
+    System.out.println("DPS: " + dps);
+  }
+}
