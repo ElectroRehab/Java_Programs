@@ -1,0 +1,32 @@
+package main;
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+    // Declare variables below
+    double floatPoint1;
+    double floatPoint2;
+    double sumPoints;
+    double avrPoints;
+    Scanner keyboard = new Scanner(System.in);
+    // Start User Input Section
+    System.out.println("Enter two floating point numbers below.");
+    // Display "Enter 1st floating point number:"
+    System.out.print("Enter 1st floating point number: ");
+    // Input "Enter 1st floating point number:"
+    floatPoint1 = keyboard.nextDouble();
+    // Display "Enter 2nd floating point number below."
+    System.out.print("Enter 2nd floating point number: ");
+    // Input "Enter 2nd floating point number:"
+    floatPoint2 = keyboard.nextDouble();
+    // End User Input Section
+    // Begin Calculations
+    // Input "sumPoints"
+    sumPoints = (floatPoint1+floatPoint2);
+    // Display "The average of the inputted information above is:"
+    System.out.print("The average of the inputted information above is: ");
+    // Show Results
+    // Display "avrPoints"
+    avrPoints = sumPoints / 2;
+    System.out.print(avrPoints + "\n");
+  }
+}
