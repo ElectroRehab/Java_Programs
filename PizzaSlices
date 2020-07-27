@@ -1,0 +1,208 @@
+package m4hw2;
+// Import Java utilites 
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class M4HW2 {
+    // main() Module
+    public static void main(String[] args) {
+        // Set Formatting
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(0);
+        // Declare Variables
+        double pizza, sliceCuts, hoominz, leftOvers, viewPsu;
+        // Scanner Keyboard for user interface input
+        Scanner keyboard = new Scanner(System.in);
+        // Display porpose and question sections.
+        System.out.println("Answer the following questions to see how "
+                + "many slices of pizza will be leftover.");
+        System.out.println("How many pizza's will you have?: ");
+        pizza = keyboard.nextDouble();
+        System.out.println("How many slices will the pizza's be cut into?: ");
+        sliceCuts = keyboard.nextDouble();
+        System.out.println("Finally, how many people will be partaking?: ");
+        hoominz = keyboard.nextDouble();
+        System.out.println("");
+        // Call calcInfo() Module with the variables 'pizza',
+        // 'sliceCuts', and 'hoominz'
+        leftOvers = calcInfo(pizza, sliceCuts, hoominz);
+        //
+        // Display calculations (Program End)
+        //
+        // If, ElseIf and Else Statements to determine 
+        // what is the correct response to the inputted information.
+        //
+        // State to display when there isn't enough slices. 
+        if (leftOvers < 0) {
+            System.out.println("You will be short " 
+                    + (leftOvers * -1) + " slices. \nPlease order more pizza.");
+        }
+        // Statement to display no leftovers
+        else if (leftOvers == 0) {
+            System.out.println("You have exactly enough slices, leaving "
+                + leftOvers + " pieces remaining.");
+        }
+        else {
+            System.out.println("There will be a total of "
+                + leftOvers + " pieces left");
+        }
+        // Pseudocode Display Prompt
+        System.out.println("Enter any number to view program's pseudocode: ");
+        // Variable 'viewPsu' used for user input
+        viewPsu = keyboard.nextDouble();
+        // Ensure proper calculation for 'If & Else Statements'. 
+        viewPsu = viewPsu * 0;
+        if (viewPsu == 0) {
+            displayPseudocode();
+        }
+        else{
+            displayPseudocode();
+        }
+    }
+    // calcInfo() Module with the variables 'pizza', 'sliceCuts', and 'hoominz'
+    public static double calcInfo(double pizza, double sliceCuts, 
+            double hoominz) {
+        //Declare variables
+        double subtotalSlices, threePack, leftOvers;
+        // Start Calculations
+        // Variable 'subtotalSlices' used to calculate inital amount of slices
+        // to be desctributed among the participants.
+        subtotalSlices = pizza * sliceCuts;
+        // Varaible 'threePack' used to calculate how many slices
+        // will be needed to feed everyone wanting some.
+        threePack = hoominz * 3;
+        // Variable 'leftOvers' used to determine the remaining slices after
+        // everyone has been fed.
+        leftOvers = subtotalSlices - threePack; 
+        // return 'leftOvers' variable to be displayed in main() Module.
+        return leftOvers;
+    }// displayPseudocode() Module
+    public static void displayPseudocode() {
+        // Display Code with Pseudocode
+        System.out.println("package m4hw2;\n" +
+"// This assignment will evaluate your ability to design and\n" +
+"// write a program to solve an algorithm.\n" +
+"//\n" +
+"// Point value: 100\n" +
+"//\n" +
+"// Using NetBeans, complete exercise #11 in the Programming\n" +
+"// Exercises at the end of the chapter on page 73. \n" +
+"// (This one is a little tricker -- but it has a lot in common \n" +
+"// with the last few assignments.)\n" +
+"//\n" +
+"// Leftover Pizza\n" +
+"//\n" +
+"// You're planning a pizza party and plan to give\n" +
+"// each person 3 slices of pizza.\n" +
+"//\n" +
+"// Design a program that displays the number of slices\n" +
+"// that will be left over. The program should ask for:\n" +
+"//  1) Number of pizzas you will have.\n" +
+"//  2) Number of slices per pizza.\n" +
+"//  3) Number of people attending.\n" +
+"//  4) The program should then display the number of slices left over.\n" +
+"//  5) You will need to also write the pseudocode for the program:\n" +
+"//      a) Write your pseudocode in a method called\n" +
+"//      b) displayPseudocode() and call it from the main() method.\n" +
+"//\n" +
+"// Name your program M4HW2_Lastname\n" +
+"//\n" +
+"// At the top of the program add the following\n" +
+"// comments to identify your program\n" +
+"\n" +
+"// Jon King\n" +
+"// M4HW2\n" +
+"// 24OCT19\n" +
+"// Brief description of what the program does\n" +
+"// \n" +
+"// Resources\n" +
+"//  1) Use your notes and book as references for completing the assignment\n" +
+"//  2) Submit your zipped project through the link below\n" +
+"//\n" +
+"//\n" +
+"//\n" +
+"// Import Java utilites \n" +
+"import java.util.Scanner;\n" +
+"import java.text.NumberFormat;\n" +
+"public class M4HW2 {\n" +
+"    // main() Module\n" +
+"    public static void main(String[] args) {\n" +
+"        // Set Formatting\n" +
+"        NumberFormat formatter = NumberFormat.getInstance();\n" +
+"        formatter.setMaximumFractionDigits(2);\n" +
+"        formatter.setMinimumFractionDigits(0);\n" +
+"        // Declare Variables\n" +
+"        double pizza, sliceCuts, hoominz, leftOvers, viewPsu;\n" +
+"        // Scanner Keyboard for user interface input\n" +
+"        Scanner keyboard = new Scanner(System.in);\n" +
+"        // Display porpose and question sections.\n" +
+"        System.out.println(\"Answer the following questions to see how \"\n" +
+"                + \"many slices of pizza will be leftover.\");\n" +
+"        System.out.println(\"How many pizza's will you have?: \");\n" +
+"        pizza = keyboard.nextDouble();\n" +
+"        System.out.println(\"How many slices will the pizza's be cut into?: \");\n" +
+"        sliceCuts = keyboard.nextDouble();\n" +
+"        System.out.println(\"Finally, how many people will be partaking?: \");\n" +
+"        hoominz = keyboard.nextDouble();\n" +
+"        System.out.println(\"\");\n" +
+"        // Call calcInfo() Module with the variables 'pizza',\n" +
+"        // 'sliceCuts', and 'hoominz'\n" +
+"        leftOvers = calcInfo(pizza, sliceCuts, hoominz);\n" +
+"        //\n" +
+"        // Display calculations (Program End)\n" +
+"        //\n" +
+"        // If, ElseIf and Else Statements to determine \n" +
+"        // what is the correct response to the inputted information.\n" +
+"        //\n" +
+"        // State to display when there isn't enough slices. \n" +
+"        if (leftOvers < 0) {\n" +
+"            System.out.println(\"You will be short \" \n" +
+"                    + (leftOvers * -1) + \" slices. \\nPlease order more pizza.\");\n" +
+"        }\n" +
+"        // Statement to display no leftovers\n" +
+"        else if (leftOvers == 0) {\n" +
+"            System.out.println(\"You have exactly enough slices, leaving \"\n" +
+"                + leftOvers + \" pieces remaining.\");\n" +
+"        }\n" +
+"        else {\n" +
+"            System.out.println(\"There will be a total of \"\n" +
+"                + leftOvers + \" pieces left\");\n" +
+"        }\n" +
+"        // Pseudocode Display Prompt\n" +
+"        System.out.println(\"Enter any number to view program's pseudocode: \");\n" +
+"        // Variable 'viewPsu' used for user input\n" +
+"        viewPsu = keyboard.nextDouble();\n" +
+"        // Ensure proper calculation for 'If & Else Statements'. \n" +
+"        viewPsu = viewPsu * 0;\n" +
+"        if (viewPsu == 0) {\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"        else{\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"    }\n" +
+"    // calcInfo() Module with the variables 'pizza', 'sliceCuts', and 'hoominz'\n" +
+"    public static double calcInfo(double pizza, double sliceCuts, \n" +
+"            double hoominz) {\n" +
+"        //Declare variables\n" +
+"        double subtotalSlices, threePack, leftOvers;\n" +
+"        // Start Calculations\n" +
+"        // Variable 'subtotalSlices' used to calculate inital amount of slices\n" +
+"        // to be desctributed among the participants.\n" +
+"        subtotalSlices = pizza * sliceCuts;\n" +
+"        // Varaible 'threePack' used to calculate how many slices\n" +
+"        // will be needed to feed everyone wanting some.\n" +
+"        threePack = hoominz * 3;\n" +
+"        // Variable 'leftOvers' used to determine the remaining slices after\n" +
+"        // everyone has been fed.\n" +
+"        leftOvers = subtotalSlices - threePack; \n" +
+"        // return 'leftOvers' variable to be displayed in main() Module.\n" +
+"        return leftOvers;\n" +
+"    }// displayPseudocode() Module\n" +
+"    public static void displayPseudocode() {\n" +
+"        // Display Code with Pseudocode\n" +
+"        System.out.println(\"***CODE COPIED HERE***\");        \n" +
+"    }\n" +
+"}");        
+    }
+}
