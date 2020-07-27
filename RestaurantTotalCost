@@ -1,0 +1,43 @@
+package main;
+import java.util.Scanner;
+import java.text.NumberFormat;
+class Main {
+  public static void main(String[] args) {
+    //Declare variables
+    double foodCost, salesTax, tip15, salesTaxTotal, tipTotal, grandTotal;
+    Scanner keyboard = new Scanner(System.in);
+    // Ask user food cost
+    System.out.println("What was the $ cost of your meal?");
+    // Input foodCost
+    foodCost = keyboard.nextDouble();
+    // Calculate the sales tax:
+    salesTax = .06;
+    salesTaxTotal = foodCost*salesTax;
+    // Calculate the 15% tip total:
+    tip15 = .15;
+    tipTotal = foodCost*tip15;
+    // Calculate meal total:
+    grandTotal = foodCost+salesTaxTotal+tipTotal;
+    // Setup local currency format. 
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    // Display results of tax:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(foodCost));
+    System.out.print(" for the food.");
+    System.out.println("");
+    // Display results of tax:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(salesTaxTotal));
+    System.out.print(" for the tax.");
+    System.out.println("");
+    // Display results of tip:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(tipTotal));
+    System.out.print(" for the tip.");
+    System.out.println("");
+    // Display Grand total paid:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(grandTotal));
+    System.out.print(" for the entire meal.\n");
+  }
+}
