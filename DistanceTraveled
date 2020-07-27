@@ -1,0 +1,117 @@
+package m4hw1;
+// Imported Plug-Ins Information
+import java.util.Scanner;
+import java.text.NumberFormat;
+// Start program
+public class M4HW1 {
+    // main() Module
+    public static void main(String[] args) {
+        // Declare the formatting type for program.
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(0);
+        // Declare Variables
+        double vehSpeed = 60, time5 = 5, time8 = 8, time12 = 12, viewPsu;
+        // Scanner Keyboard for user interface input
+        Scanner keyboard = new Scanner(System.in);
+        // Ask the user to enter amount of tickets sold 
+        // Display the speed a car is traveling
+        System.out.println("If a car is traveling 60 Miles Per Hour (MPH):");
+        System.out.print("1) In 5 hours, you will have traveled ");
+        // Calculation of the speed and the time traveled in 5 hours.
+        System.out.print(formatter.format(vehSpeed * time5));
+        System.out.print(" miles.");
+        System.out.println("");
+        System.out.print("2) In 8 hours, you will have traveled ");
+        // Calculation of the speed and the time traveled in 8 hours.
+        System.out.print(formatter.format(vehSpeed * time8));
+        System.out.print(" miles.");
+        System.out.println("");
+        System.out.print("3) In 12 hours, you will have traveled ");
+        // Calculation of the speed and the time traveled in 12 hours.
+        System.out.print(formatter.format(vehSpeed * time12));
+        System.out.print(" miles.");
+        System.out.println("");
+        // Pseudocode Display Prompt
+        System.out.print("Enter any number to view program's pseudocode: ");
+        // Variable 'viewPsu' used for user input
+        viewPsu = keyboard.nextDouble();
+        // Ensure proper calculation for 'If & Else Statements'. 
+        viewPsu = viewPsu * 0;
+        if (viewPsu == 0) {
+            displayPseudocode();
+        }
+        else{
+            displayPseudocode();
+        }
+    }
+    public static void displayPseudocode(){
+        // Display Code with Pseudocode
+        System.out.println("package m4hw1;\n" +
+"// Jon King\n" +
+"// M4HW1\n" +
+"// 23OCT19\n" +
+"// Brief description of what the program does:\n" +
+"//  1)  Using NetBeans, complete exercise #5 in the Programming Exercises\n" +
+"//      at the end of the chapter on page 72.\n" +
+"//  2)  You will need to also write the pseudocode for the program:\n" +
+"//          Write your pseudocode in a method called \n" +
+"//          displayPseudocode() and call it from the main() method.\n" +
+"//  3)  Calculate the distance a car travels without any interruptions\n" +
+"//      going 60 MPH and times traveling of 5, 8, & 12 hours.\n" +
+"//\n" +
+"//\n" +
+"//\n" +
+"// Imported Plug-Ins Information\n" +
+"import java.util.Scanner;\n" +
+"import java.text.NumberFormat;\n" +
+"// Start program\n" +
+"public class M4HW1 {\n" +
+"    // main() Module\n" +
+"    public static void main(String[] args) {\n" +
+"        // Declare the formatting type for program.\n" +
+"        NumberFormat formatter = NumberFormat.getInstance();\n" +
+"        formatter.setMaximumFractionDigits(2);\n" +
+"        formatter.setMinimumFractionDigits(0);\n" +
+"        // Declare Variables\n" +
+"        double vehSpeed = 60, time5 = 5, time8 = 8, time12 = 12, viewPsu;\n" +
+"        // Scanner Keyboard for user interface input\n" +
+"        Scanner keyboard = new Scanner(System.in);\n" +
+"        // Ask the user to enter amount of tickets sold \n" +
+"        // Display the speed a car is traveling\n" +
+"        System.out.println(\"If a car is traveling 60 Miles Per Hour (MPH):\");\n" +
+"        System.out.print(\"1) In 5 hours, you will have traveled \");\n" +
+"        // Calculation of the speed and the time traveled in 5 hours.\n" +
+"        System.out.print(formatter.format(vehSpeed * time5));\n" +
+"        System.out.print(\" miles.\");\n" +
+"        System.out.println(\"\");\n" +
+"        System.out.print(\"2) In 8 hours, you will have traveled \");\n" +
+"        // Calculation of the speed and the time traveled in 8 hours.\n" +
+"        System.out.print(formatter.format(vehSpeed * time8));\n" +
+"        System.out.print(\" miles.\");\n" +
+"        System.out.println(\"\");\n" +
+"        System.out.print(\"3) In 12 hours, you will have traveled \");\n" +
+"        // Calculation of the speed and the time traveled in 12 hours.\n" +
+"        System.out.print(formatter.format(vehSpeed * time12));\n" +
+"        System.out.print(\" miles.\");\n" +
+"        System.out.println(\"\");\n" +
+"        // Pseudocode Display Prompt\n" +
+"        System.out.print(\"Enter any number to view program's pseudocode: \");\n" +
+"        // Variable 'viewPsu' used for user input\n" +
+"        viewPsu = keyboard.nextDouble();\n" +
+"        // Ensure proper calculation for 'If & Else Statements'. \n" +
+"        viewPsu = viewPsu * 0;\n" +
+"        if (viewPsu == 0) {\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"        else{\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"    }\n" +
+"    public static void displayPseudocode(){\n" +
+"        // Display Code with Pseudocode\n" +
+"        System.out.println(\"***CODE COPIED HERE***\");\n" +
+"    }\n" +
+"}");
+    }
+}
