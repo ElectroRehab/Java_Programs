@@ -1,0 +1,202 @@
+package m4t1;
+// Imported Plug-Ins Information
+import java.util.Scanner;
+import java.text.NumberFormat;
+// Start program
+public class M4T1 {
+    // main() Module
+    public static void main(String[] args) {
+        // Declare formatting
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(2);
+        // Declare variables
+        double classASeating, classBSeating, classCSeating, viewPsu;
+        // Scanner Keyboard for user interface input
+        Scanner keyboard = new Scanner(System.in);
+        // Ask the user to enter amount of tickets sold 
+        System.out.println("Enter the amount of tickets sold in each Class: ");
+        System.out.println("");
+        // Input the quantity of 'Class A' tickets sold.  
+        System.out.println("Enter Number of 'Class A' Seats Sold: ");
+        // Variable 'classASeating' used as user input.
+        classASeating = keyboard.nextDouble();
+        // Input the quantity of 'Class B' tickets sold.  
+        System.out.println("Enter Number of 'Class B' Seats Sold: ");
+        // Variable 'classBSeating' used as user input.
+        classBSeating = keyboard.nextDouble();
+        // Input the quantity of 'Class C' tickets sold.  
+        System.out.println("Enter Number of 'Class C' Seats Sold: ");
+        // Variable 'classCSeating' used as user input.
+        classCSeating = keyboard.nextDouble();
+        // Display total revenue of combined tickets sold. 
+        System.out.print("Your total revenue with tickets sold is $");
+        // Call module displayAverage() with the recently created variables:
+        // 'classASeating', 'classBSeating', & 'classCSeating'
+        double totalRevenue = displayAverage(classASeating, classBSeating, classCSeating);
+        // Display Calculation in current location currency format.
+        System.out.print(formatter.format(totalRevenue));
+        System.out.println(" after $1000.00 in operating costs.");
+        // Pseudocode Display Prompt
+        System.out.println("Enter any number to view program's pseudocode: ");
+        // Variable 'viewPsu' used for user input
+        viewPsu = keyboard.nextDouble();
+        // Ensure proper calculation for 'If & Else Statements'. 
+        viewPsu = viewPsu * 0;
+        if (viewPsu == 0) {
+            displayPseudocode();
+        }
+        else{
+            displayPseudocode();
+        }
+    }
+    // displayAverage() Module with the recently created variables:
+    // 'classASeating', 'classBSeating', & 'classCSeating'
+    public static double displayAverage(double classASeating, 
+            double classBSeating, double classCSeating) {
+        // Declare formatting for currency and proper decimal placing.
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(2);
+        // Declare variables
+        double classATotal, classBTotal, classCTotal, classA, 
+                classB, classC, totalRevenue, operCosts;
+        // Variable 'classA' used as $15 per 'Class A' tickets 
+        classA = 15;
+        // Variable 'classB' used as $12 per 'Class B' tickets 
+        classB = 12;
+        // Variable 'classC' used as $9 per 'Class C' tickets 
+        classC = 9;
+        // Variable 'operCosts' used as $1000 operating cost per game.
+        operCosts = 1000;
+        // Variable 'classATotal' used to calculate the revenue
+        // generated from the total 'Class A Seats' sold.
+        classATotal = classA * classASeating;
+        // Variable 'classBTotal' used to calculate the revenue
+        // generated from the total 'Class B Seats' sold.
+        classBTotal = classB * classBSeating;
+        // Variable 'classCTotal' used to calculate the revenue
+        // generated from the total 'Class C Seats' sold.
+        classCTotal = classC * classCSeating;
+        // Variable 'totalRevenue' used to calculate the Grand 
+        // Total of generated revenue between all seating classes.
+        totalRevenue = classATotal + classBTotal + classCTotal - operCosts;
+        // Return variable totalRevenue
+        return totalRevenue;
+    }
+    // displayPseudocode() Module
+    public static void displayPseudocode() {
+        // Display Code with Pseudocode
+        System.out.println("package m4t1;\n" +
+"//\n" +
+"// Jon King\n" +
+"// M4T1\n" +
+"// 12OCT19\n" +
+"// Brief Description of Asssignment:\n" +
+"//  1)  This assignment will evaluate your ability to design and\n" +
+"//      write a program to solve an algorithm.\n" +
+"//  2)  Using NetBeans, complete exercise #7 (Stadium Seating) in the \n" +
+"//      Programming Exercises at the end of the chapter on page 129.\n" +
+"//  3)  You will need to also write the pseudocode for the program.\n" +
+"//  4)  Write your pseudocode in a method called displayPseudocode()\n" +
+"//      and call it from the main() method.\n" +
+"//  5)  Calculate told revenue generated through the sale of \n" +
+"//      specific seating within the stadium.\n" +
+"//  6)  In addition, the stadium has an operating cost of $1000 per\n" +
+"//      game. Tell the user whether the team will be making money\n" +
+"//      or losing money on this game, and what amount.\n" +
+"//\n" +
+"//\n" +
+"// Imported Plug-Ins Information\n" +
+"import java.util.Scanner;\n" +
+"import java.text.NumberFormat;\n" +
+"// Start program\n" +
+"public class M4T1 {\n" +
+"    // main() Module\n" +
+"    public static void main(String[] args) {\n" +
+"        // Declare formatting\n" +
+"        NumberFormat formatter = NumberFormat.getInstance();\n" +
+"        formatter.setMaximumFractionDigits(2);\n" +
+"        formatter.setMinimumFractionDigits(2);\n" +
+"        // Declare variables\n" +
+"        double classASeating, classBSeating, classCSeating, viewPsu;\n" +
+"        // Scanner Keyboard for user interface input\n" +
+"        Scanner keyboard = new Scanner(System.in);\n" +
+"        // Ask the user to enter amount of tickets sold \n" +
+"        System.out.println(\"Enter the amount of tickets sold in each Class: \");\n" +
+"        System.out.println(\"\");\n" +
+"        // Input the quantity of 'Class A' tickets sold.  \n" +
+"        System.out.println(\"Enter Number of 'Class A' Seats Sold: \");\n" +
+"        // Variable 'classASeating' used as user input.\n" +
+"        classASeating = keyboard.nextDouble();\n" +
+"        // Input the quantity of 'Class B' tickets sold.  \n" +
+"        System.out.println(\"Enter Number of 'Class B' Seats Sold: \");\n" +
+"        // Variable 'classBSeating' used as user input.\n" +
+"        classBSeating = keyboard.nextDouble();\n" +
+"        // Input the quantity of 'Class C' tickets sold.  \n" +
+"        System.out.println(\"Enter Number of 'Class C' Seats Sold: \");\n" +
+"        // Variable 'classCSeating' used as user input.\n" +
+"        classCSeating = keyboard.nextDouble();\n" +
+"        // Display total revenue of combined tickets sold. \n" +
+"        System.out.print(\"Your total revenue with tickets sold is $\");\n" +
+"        // Call module displayAverage() with the recently created variables:\n" +
+"        // 'classASeating', 'classBSeating', & 'classCSeating'\n" +
+"        double totalRevenue = displayAverage(classASeating, classBSeating, classCSeating);\n" +
+"        // Display Calculation in current location currency format.\n" +
+"        System.out.print(formatter.format(totalRevenue));\n" +
+"        System.out.println(\" after $1000.00 in operating costs.\");\n" +
+"        // Pseudocode Display Prompt\n" +
+"        System.out.println(\"Enter any number to view program's pseudocode: \");\n" +
+"        // Variable 'viewPsu' used for user input\n" +
+"        viewPsu = keyboard.nextDouble();\n" +
+"        // Ensure proper calculation for 'If & Else Statements'. \n" +
+"        viewPsu = viewPsu * 0;\n" +
+"        if (viewPsu == 0) {\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"        else{\n" +
+"            displayPseudocode();\n" +
+"        }\n" +
+"    }\n" +
+"    // displayAverage() Module with the recently created variables:\n" +
+"    // 'classASeating', 'classBSeating', & 'classCSeating'\n" +
+"    public static double displayAverage(double classASeating, \n" +
+"            double classBSeating, double classCSeating) {\n" +
+"        // Declare formatting for currency and proper decimal placing.\n" +
+"        NumberFormat formatter = NumberFormat.getInstance();\n" +
+"        formatter.setMaximumFractionDigits(2);\n" +
+"        formatter.setMinimumFractionDigits(2);\n" +
+"        // Declare variables\n" +
+"        double classATotal, classBTotal, classCTotal, classA, \n" +
+"                classB, classC, totalRevenue, operCosts;\n" +
+"        // Variable 'classA' used as $15 per 'Class A' tickets \n" +
+"        classA = 15;\n" +
+"        // Variable 'classB' used as $12 per 'Class B' tickets \n" +
+"        classB = 12;\n" +
+"        // Variable 'classC' used as $9 per 'Class C' tickets \n" +
+"        classC = 9;\n" +
+"        // Variable 'operCosts' used as $1000 operating cost per game.\n" +
+"        operCosts = 1000;\n" +
+"        // Variable 'classATotal' used to calculate the revenue\n" +
+"        // generated from the total 'Class A Seats' sold.\n" +
+"        classATotal = classA * classASeating;\n" +
+"        // Variable 'classBTotal' used to calculate the revenue\n" +
+"        // generated from the total 'Class B Seats' sold.\n" +
+"        classBTotal = classB * classBSeating;\n" +
+"        // Variable 'classCTotal' used to calculate the revenue\n" +
+"        // generated from the total 'Class C Seats' sold.\n" +
+"        classCTotal = classC * classCSeating;\n" +
+"        // Variable 'totalRevenue' used to calculate the Grand \n" +
+"        // Total of generated revenue between all seating classes.\n" +
+"        totalRevenue = classATotal + classBTotal + classCTotal - operCosts;\n" +
+"        // Return variable totalRevenue\n" +
+"        return totalRevenue;\n" +
+"    }\n" +
+"    // displayPseudocode() Module\n" +
+"    public static void displayPseudocode() {\n" +
+"        // Display Code with Pseudocode\n" +
+"        System.out.println(\"***CODE COPIED HERE***\");        \n" +
+"    }\n" +
+"}");        
+    }
+}
