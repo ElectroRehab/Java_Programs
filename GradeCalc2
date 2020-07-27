@@ -1,0 +1,182 @@
+package m4lab;
+
+import java.util.Scanner;
+import java.text.NumberFormat;
+public class M4LAB {
+    // main module
+    public static void main(String[] args) {
+        // Declare formatting
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(2);
+        // Declare variables
+        double test1, test2, test3, averageGrade;
+        String message1;
+        // Scanner Keyboard
+        Scanner keyboard = new Scanner(System.in);
+        // Ask user to enter grades 
+        System.out.println("Enter 3 grades:");
+        // Input Test1
+        System.out.println("Enter 1st grade:");
+        test1 = keyboard.nextDouble();
+        // Input Test2
+        System.out.println("Enter 2nd grade:");
+        test2 = keyboard.nextDouble();
+        // Input Test3
+        System.out.println("Enter 3rd grade:");
+        test3 = keyboard.nextDouble();
+        //Display test scores
+        System.out.print("Your 1st test score was a ");
+        System.out.println(formatter.format(test1));
+        // Letter Grades Test 1 Results
+        message1 = displayLetterTest1(test1);
+        System.out.print("With a letter grade of: ");
+        System.out.println(message1);
+        
+        System.out.print("Your 2nd test score was a ");
+        System.out.println(formatter.format(test2));
+        // Letter Grades Test 2 Results
+        message1 = displayLetterTest2(test2);
+        System.out.print("With a letter grade of: ");
+        System.out.println(message1);
+        
+        System.out.print("Your 3rd test score was a ");
+        System.out.println(formatter.format(test3));
+        // Letter Grades Test 2 Results
+        message1 = displayLetterTest3(test3);
+        System.out.print("With a letter grade of: ");
+        System.out.println(message1);
+        // Call average
+        averageGrade = displayAverage(test1, test2, test3);
+        System.out.print("Your average of the scores was ");
+        System.out.println(formatter.format(averageGrade));
+        // Letter Grades Average
+        message1 = displayLetter(test1, test2, test3);
+        System.out.print("Leaving you with a final letter grade of: ");
+        System.out.println(message1);
+    }
+    // displayAverage module
+    public static double displayAverage(double test1, double test2, double test3) {
+        // Declare formatting
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(2);
+        // Declare variables
+        double totalGrades, threeTimes, averageGrade;
+        totalGrades = test1 + test2 + test3;
+        threeTimes = 3;
+        averageGrade = totalGrades / threeTimes;
+        // Return variable averageGrade
+        return averageGrade;
+    }
+    // displayLetter module
+    public static String displayLetter(double test1, double test2, double test3) {
+        // Declare variables
+        double totalGrades, threeTimes, averageGrade;
+        totalGrades = test1 + test2 + test3;
+        threeTimes = 3;
+        averageGrade = totalGrades / threeTimes;
+        String message1;
+        // If Statement for letter A results
+        if (averageGrade >= 90) {
+                message1 = "'A'";
+        }
+        // ElseIf Statement for letter B results
+        else if (averageGrade >= 80) {
+                message1 = "'B'";
+        }
+        // ElseIf Statement for letter C results
+        else if (averageGrade >= 70) {
+                message1 = "'C'";
+        }
+        // ElseIf Statement for letter D results
+        else if (averageGrade >= 60) {
+                message1 = "'D'";
+        }
+        // Else Statement for letter F results
+        else {
+                message1 = "'F'";
+        }
+        // Return message1 string results
+        return message1;
+    }       
+    // displayLetter module
+    public static String displayLetterTest1(double test1) {
+        // Declare variables
+        String message1;
+        // If Statement for letter A results
+        if (test1 >= 90) {
+                message1 = "'A'";
+        }
+        // ElseIf Statement for letter B results
+        else if (test1 >= 80) {
+                message1 = "'B'";
+        }
+        // ElseIf Statement for letter C results
+        else if (test1 >= 70) {
+                message1 = "'C'";
+        }
+        // ElseIf Statement for letter D results
+        else if (test1 >= 60) {
+                message1 = "'D'";
+        }
+        // Else Statement for letter F results
+        else {
+                message1 = "'F'";
+        }
+        // Return message1 string results
+        return message1;
+    }       
+    public static String displayLetterTest2(double test2) {
+        // Declare variables
+        String message1;
+        // If Statement for letter A results
+        if (test2 >= 90) {
+                message1 = "'A'";
+        }
+        // ElseIf Statement for letter B results
+        else if (test2 >= 80) {
+                message1 = "'B'";
+        }
+        // ElseIf Statement for letter C results
+        else if (test2 >= 70) {
+                message1 = "'C'";
+        }
+        // ElseIf Statement for letter D results
+        else if (test2 >= 60) {
+                message1 = "'D'";
+        }
+        // Else Statement for letter F results
+        else {
+                message1 = "'F'";
+        }
+        // Return message1 string results
+        return message1;
+    }  
+    public static String displayLetterTest3(double test3) {
+        // Declare variables
+        String message1;
+        // If Statement for letter A results
+        if (test3 >= 90) {
+                message1 = "'A'";
+        }
+        // ElseIf Statement for letter B results
+        else if (test3 >= 80) {
+                message1 = "'B'";
+        }
+        // ElseIf Statement for letter C results
+        else if (test3 >= 70) {
+                message1 = "'C'";
+        }
+        // ElseIf Statement for letter D results
+        else if (test3 >= 60) {
+                message1 = "'D'";
+        }
+        // Else Statement for letter F results
+        else {
+                message1 = "'F'";
+        }
+        // Return message1 string results
+        return message1;
+    }       
+}
