@@ -1,0 +1,74 @@
+package main;
+import java.util.Scanner;
+import java.text.NumberFormat;
+class Main {
+  public static void main(String[] args) {
+    //Declare variables
+    double foodCost, salesTax, tip15, salesTaxTotal, tipTotal, grandTotal;
+    Scanner keyboard = new Scanner(System.in);
+    // Ask user food cost
+    System.out.println("What was the $ cost of your meal?");
+    // Input foodCost
+    foodCost = keyboard.nextDouble();
+    // Setup local currency format. 
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    // Display results of tax:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(foodCost));
+    System.out.print(" for the food.");
+    System.out.println("");
+    // Call displayTax module
+    salesTaxTotal = displayTax(foodCost);
+    // Call displayTip module
+    tipTotal = displayTip(foodCost);
+    // Call printReceipt module
+    printReceipt(foodCost, salesTaxTotal, tipTotal);
+  }
+  // displayTax module start
+  public static double displayTax(double foodCost) {
+    // Setup local currency format.
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    //Declare variables
+    double salesTax, salesTaxTotal;
+    // Calculate the sales tax:
+    salesTax = .06;
+    salesTaxTotal = foodCost*salesTax;
+    // Display results of tax:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(salesTaxTotal));
+    System.out.print(" for the tax.");
+    System.out.println("");
+    // Return salesTaxTotal
+    return salesTaxTotal;
+  }
+  // displayTip module start
+  public static double displayTip(double foodCost) {
+    // Setup local currency format.
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    //Declare variables
+    double tip15, tipTotal;
+    // Calculate the 15% tip total:
+    tip15 = .15;
+    tipTotal = foodCost*tip15;
+    // Display results of tip:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(tipTotal));
+    System.out.print(" for the tip.");
+    System.out.println("");
+    // Return tipTotal
+    return tipTotal;
+  }
+  // printReceipt module start
+  public static void printReceipt(double foodCost, double salesTaxTotal, double tipTotal) {
+    // Setup local currency format.
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    //Declare variables
+    double grandTotal;
+    // Calculate meal total:
+    grandTotal = foodCost+salesTaxTotal+tipTotal;
+    // Display Grand total paid:
+    System.out.print("You paid ");
+    System.out.print(formatter.format(grandTotal));
+    System.out.print(" for the entire meal.");
+  }
+}
