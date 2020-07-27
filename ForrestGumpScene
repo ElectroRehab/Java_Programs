@@ -1,0 +1,68 @@
+package main;
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+    // Tell User what movie
+    // Display "Forrest Gump - 1994"
+    System.out.println("Forrest Gump - 1994");
+    // Display Forrest Gump's scene.
+    System.out.println("");
+    // Display "FORREST"
+    System.out.println("FORREST");
+    // Display "Lieutenant Dan, what are you doing here?"
+    System.out.println("Lieutenant Dan, what are you doing here?");
+    // Display ""
+    System.out.println("");
+    // Display "LT. DAN"
+    System.out.println("LT. DAN");
+    // Display "Well, I thought I'd try out my sea legs."
+    System.out.println("Well, I thought I'd try out my sea legs.");
+    // Display ""
+    System.out.println("");
+    // Display "FORREST"
+    System.out.println("FORREST");
+    // Display "Well, you ain't got no legs, Lieutenant Dan."
+    System.out.println("Well, you ain't got no legs, Lieutenant Dan.");
+    // Display ""
+    System.out.println("");
+    // Display "LT. DAN"
+    System.out.println("LT. DAN");
+    // Display "Well, well, Captain Forrest Gump. I had to see this for myself. And I told you if you were ever a shrimp boat captain, that I'd be your first mate. Well, here I am. I am a man of my word."
+    System.out.println("Well, well, Captain Forrest Gump. I had to see this for myself. And I told you if you were ever a shrimp boat captain, that I'd be your first mate. Well, here I am. I am a man of my word.");
+    // Display ""
+    System.out.println("");
+    // Display "FORREST"
+    System.out.println("FORREST");
+    // Display "Okay."
+    System.out.println("Okay.");
+    // Display ""
+    System.out.println("");
+    // Display "Forrest shakes Lt. Dan's hand."
+    System.out.println("Forrest shakes Lt. Dan's hand.");
+    // Display ""
+    System.out.println("");
+    // Display "LT. DAN"
+    System.out.println("LT. DAN");
+    // Display "Yeah, but don't you be thinking that I'm gonna be calling you sir."
+    System.out.println("Yeah, but don't you be thinking that I'm gonna be calling you sir.");
+    // Display ""
+    System.out.println("");
+    // Display "FORREST"
+    System.out.println("FORREST");
+    // Display "No, sir."
+    System.out.println("No, sir.");
+    // Display ""
+    System.out.println("");
+    // Display "Forrest's boat glides, crushing a dock. Forrest and Lt. Dan look at it."
+    System.out.println("Forrest's boat glides, crushing a dock. Forrest and Lt. Dan look at it.");
+    // Display ""
+    System.out.println("");
+    // Display "FORREST"
+    System.out.println("FORREST");
+    // Display "That's my boat."
+    System.out.println("That's my boat.");
+    // Display "END SCENE"
+    System.out.println("");
+    System.out.println("END SCENE");
+  }
+}
