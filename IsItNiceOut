@@ -1,0 +1,36 @@
+package m3lab2;
+// Imported Info
+import java.util.Scanner;
+import java.text.NumberFormat;
+// Start program
+public class M3LAB2 {
+    // main module
+    public static void main(String[] args) {
+        // Declare formatting
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMaximumFractionDigits(2);
+        formatter.setMinimumFractionDigits(2);
+        // Declare variables
+        double currentTemp, niceTemp;
+        String message;
+        // Scanner Keyboard
+        Scanner keyboard = new Scanner(System.in);
+        // Ask the user for the current temperature
+        System.out.print("Input the current temperature: ");
+        currentTemp = keyboard.nextDouble();
+        // niceTemp variable is 80 degrees
+        niceTemp = 80;
+        // If Statement calculation
+        if (currentTemp >= niceTemp) {
+                message = "'This is a nice temp'";
+        }
+        // Else Statement calculation
+        else {
+                // Message Results
+                message = "This is not a nice temp";
+        }
+        // Result
+        System.out.println(message);
+    } // End Main
+    
+} //End Code 
